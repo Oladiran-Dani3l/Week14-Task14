@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 h1 {
     font-size: 32px;
 }
@@ -80,23 +84,22 @@ h1 {
     border-right: 0;
 }
 
-.penalty-area:before{
+.goal {
     position: absolute;
     height: 70px;
     width: 35px;
     top: 35px;
     border: 2px solid white;
-    content:"";
 }
-.left .penalty-area:before{
-    /* GOALPOST */
-   left:0px;
-  border-left:0;
+
+.left .penalty-area .left-goal{
+    left:0px;
+    border-left:0;
 }
-.right .penalty-area:before{
-    /* GOALPOST */
-   right:0px;
-  border-right:0;
+
+.right .penalty-area .right-goal{
+    right:0px;
+    border-right:0;
 }
 
 .penalty-area:after{
@@ -121,5 +124,5 @@ h1 {
     top: 180px;
     left: 285px;
     z-index: 3;
+    transition: top 0.4s ease, left 0.4s ease;
 }
-
